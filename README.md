@@ -21,9 +21,9 @@ Since this is a simple static HTML site, you just need to clone the repository a
 
 To clone the repository, use the following command:
 
-```bash
+```
 git clone https://github.com/gpradeep7898/Personal-Portfolio
-
+```
 ##Contribution
 
 If you want to contribute to this project, feel free to submit a pull request.
