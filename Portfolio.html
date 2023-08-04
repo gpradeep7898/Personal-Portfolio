@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Gatti - Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo"></img>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Data Analyst</p>
+                <h1>Hi, I'm <span>Pradeep Gatti</span><br>Turning data into actionable insights!</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/hoodie.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>With a strong background in information systems and a Masters in progress from the Stevens Institute of Technology, I have honed my skills in data management, analysis, and project management. My experience as a Full Stack Engineer at Cognizant Technology Solutions Pvt. Ltd., coupled with my work on various data analytics projects, has equipped me with a unique perspective on the entire data pipeline, from collection to visualization.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python:</span><br>Expert in data analysis, machine learning algorithms, and web development.</li>
+                            <li><span>R:</span><br>Proficient in statistical modeling and data visualization.</li>
+                            <li><span>SQL:</span><br>Advanced skills in database querying, management, and optimization.</li>
+                            <li><span>Java & JavaScript:</span><br>Proficient in web application development and testing.</li>
+                            <li><span>AWS & MS Azure:</span><br>Knowledgeable in cloud computing and services.</li>
+                            <li><span>Tableau & PowerBI:</span><br>Advanced skills in data visualization and business intelligence tools.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jul’2020 - Aug’2022</span><br>Java Full Stack Engineer, Cognizant Technology Solutions Pvt. Ltd., Hyderabad, India</li>
+                            <li><span>Jan-Apr 2023</span><br>Netflix Data Dynamics: Real-Time Analytics Using Tableau, RapidMiner, Random Forest, and Linear Regression</li>
+                            <li><span>Jun-Jul 2023</span><br>TradeMaster: Online Trading Platform Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Expected May 2024</span><br>M.S. Information Systems, Stevens Institute of Technology, Hoboken, NJ, GPA: 3.9</li>
+                            <li><span>Jun.2016 - May.2020</span><br>B.Tech in Information Technology, Sree Vidyanikethan Institute of Technology, GPA: 7.5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------SERVICES---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Data Analysis</h2>
+                    <p>I use Python, R, and SQL to analyze data and extract meaningful insights.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Data Visualization</h2>
+                    <p>I use tools like Tableau and PowerBI to visualize data and make it understandable for everyone.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Machine Learning</h2>
+                    <p>I develop machine learning models to predict trends and behaviors.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------PORTFOLIO--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/BPR.jpg" alt="">
+                    <div class="layer">
+                        <h2>Volkswagen BPR: Process Innovation Management</h2>
+                        <p>Optimized Volkswagen's automobile process, eliminating 20% of inefficiencies and saving the company $500k annually.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Netflix_stats.png" alt="">
+                    <div class="layer">
+                        <h2>Netflix Data Dynamics: Real-Time Analytics</h2>
+                        <p>Developed a machine learning algorithm for real-time data analytics, achieving 95% accuracy.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/trade.jpg" alt="">
+                    <div class="layer">
+                        <h2>TradeMaster: Online Trading Platform Development</h2>
+                        <p>Developed a comprehensive online trading platform enabling users to execute virtual trades.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> pgatti@stevens.edu</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +1 (682)-283-9478</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/gpradeep7898"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gatti-pradeep7898"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my_cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+
+    </script>
+</body>
+
+</html>
