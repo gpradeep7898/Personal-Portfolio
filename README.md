@@ -31,3 +31,6 @@ If you want to contribute to this project, feel free to submit a pull request.
 ##Contact
 
 You can reach out to Pradeep via email at pgatti@stevens.edu, or contact him on LinkedIn and GitHub.
+
+
+<img width="1431" alt="Screen Shot 2023-08-04 at 11 31 28 AM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/5f001ebc-3345-4a6e-8906-24ac05854d7e">
