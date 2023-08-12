@@ -65,14 +65,15 @@ Below, you will find a visual representation of key sections from Pradeep Gatti'
 <img width="1440" alt="Screen Shot 2023-08-04 at 11 31 28 AM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/bcab61c4-91f9-4012-80aa-f5241036db0e">
 
 ### Services Overview
-![Skills Overview]
+
 <img width="1440" alt="Screen Shot 2023-08-11 at 7 01 11 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/4ed2dc97-9c18-4b77-a5c5-02e47f04014e">
 
 ### Work Detail
-![Experience Detail](path/to/experience-screenshot.png)
+
 <img width="1435" alt="Screen Shot 2023-08-11 at 7 02 25 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/8d214ae5-04d7-4efe-9845-a580ba599271">
 
 ### Contact
+
 <img width="1440" alt="Screen Shot 2023-08-11 at 7 02 46 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/6cdb3e41-2397-4d1a-88df-8927fb5b2364">
 
 
