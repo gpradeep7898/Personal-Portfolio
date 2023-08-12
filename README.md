@@ -61,8 +61,8 @@ You can reach out to Pradeep via:
 Below, you will find a visual representation of key sections from Pradeep Gatti's Data Analyst Portfolio. These images provide an insight into the design, layout, and features of the portfolio, reflecting the skills and experiences documented within the site.
 
 ### Home Section
-![Home Section]
-<img width="1440" alt="Screen Shot 2023-08-04 at 11 31 28 AM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/bcab61c4-91f9-4012-80aa-f5241036db0e">
+
+<img width="1440" alt="Screen Shot 2023-08-11 at 9 09 02 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/c0f1f1b7-1363-47b6-82f2-8da6112ab13a">
 
 ### Services Overview
 
