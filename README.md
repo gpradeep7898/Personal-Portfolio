@@ -52,7 +52,7 @@ If you want to contribute to this project, feel free to submit a pull request. A
 
 You can reach out to Pradeep via:
 
-- Email at [pgatti@stevens.edu](mailto:pgatti@stevens.edu)
+- Email at (gpradeep7898@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/gatti-pradeep7898)
 - [GitHub](https://github.com/gpradeep7898)
 
