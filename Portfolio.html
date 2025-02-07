@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
     <title>Pradeep Gatti - Data Analyst</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div id="header">
+        <!-- Custom Loader Animation -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Good things take time...📈</div>
+    </div>
+
+    <div id="theme-switcher">
+        <button id="theme-toggle-btn">Switch Theme</button>
+    </div>
+
+    <!-- Main content starts hidden -->
+    <div id="main-content" class="hidden">
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo"></img>
@@ -28,7 +44,7 @@
                 <i class="fas fa-bars"></i>
             </nav>
             <div class="header-text">
-                <p>Data Analyst</p>
+                <p><h2>Java Full Stack Developer</h2></p>
                 <h1>Hi, I'm <span>Pradeep Gatti</span><br>Turning data into actionable insights!</h1>
             </div>
         </div>
@@ -42,7 +58,12 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>With a strong background in information systems and a Masters in progress from the Stevens Institute of Technology, I have honed my skills in data management, analysis, and project management. My experience as a Python Developer at Cognizant Technology Solutions Pvt. Ltd., coupled with my work on various data analytics projects, has equipped me with a unique perspective on the entire data pipeline, from collection to visualization.</p>
+                    <p>I am a passionate Java Backend Developer with 3.5+ years of experience in designing and building high-performance, scalable applications. My expertise lies in Java, Spring Boot, and Microservices architecture, ensuring robust API development and seamless integrations. 
+
+                        I specialize in optimizing backend performance, implementing secure authentication (OAuth2, JWT), and designing relational and NoSQL databases for efficiency. I have hands-on experience in DevOps practices, CI/CD pipelines using Jenkins and Docker, and deploying scalable applications on AWS. 
+                        
+                        With a deep understanding of software design patterns, best practices, and Agile methodologies, I thrive in cross-functional teams to deliver high-quality software solutions.
+                    </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
                         <p class="tab-links" onclick="openTab('experience')">Experience</p>
@@ -60,36 +81,56 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
+                            <!-- Java Full Stack Engineer -->
                             <li>
-                                <span>Jul’2020 - Aug’2022</span><br>
+                                <span>Jul 2020 - Aug 2022</span><br>
                                 <strong>Java Full Stack Engineer, Cognizant Technology Solutions Pvt. Ltd., Hyderabad, India</strong><br>
                                 <ul>
-                                    <li>Developed and maintained complex web applications using Java, Spring Boot, and Angular.</li>
-                                    <li>Collaborated with cross-functional teams to design and implement scalable software solutions.</li>
-                                    <li>Enhanced application performance by optimizing code and implementing best practices.</li>
-                                    <li>Participated in code reviews and provided constructive feedback to peers.</li>
-                                    <li>Delivered comprehensive documentation and conducted training sessions for new team members.</li>
+                                    <li>Developed and optimized **scalable microservices** using Java, Spring Boot, and Hibernate.</li>
+                                    <li>Designed and integrated **RESTful APIs** for seamless communication across distributed services.</li>
+                                    <li>Enhanced **database performance** by implementing indexing and query optimization in PostgreSQL.</li>
+                                    <li>Implemented **Spring Security (OAuth2, JWT)** to ensure secure authentication and authorization.</li>
+                                    <li>Automated **CI/CD pipelines** using Jenkins and Docker for streamlined deployments.</li>
+                                    <li>Developed **unit and integration tests** using JUnit and Mockito, improving code quality by 30%.</li>
                                 </ul>
                             </li>
+                    
+                            <!-- Inventory Management System -->
                             <li>
-                                <span>Jan-Apr 2023</span><br>
-                                <strong>Netflix Data Dynamics: Real-Time Analytics Using Tableau, RapidMiner, Random Forest, and Linear Regression</strong><br>
+                                <span>Jan - Apr 2023</span><br>
+                                <strong>Inventory Management System (Microservices Architecture)</strong><br>
                                 <ul>
-                                    <li>Conducted real-time data analysis using Tableau, RapidMiner, and Python.</li>
-                                    <li>Applied machine learning techniques such as Random Forest and Linear Regression to predict user behaviors.</li>
-                                    <li>Visualized data insights through interactive dashboards, enhancing decision-making processes.</li>
-                                    <li>Presented findings to stakeholders, highlighting actionable insights and recommendations.</li>
+                                    <li>Architected a **high-performance inventory system** using Java, Spring Boot, and Kafka.</li>
+                                    <li>Implemented **asynchronous messaging** with RabbitMQ to handle inventory updates in real-time.</li>
+                                    <li>Developed **role-based authentication (RBAC)** and fine-grained access controls.</li>
+                                    <li>Optimized **API response time by 40%** through Redis caching and lazy loading techniques.</li>
+                                    <li>Deployed microservices using **Docker and Kubernetes**, ensuring high availability.</li>
                                 </ul>
                             </li>
+                    
+                            <!-- Employee Management System -->
                             <li>
-                                <span>Jun-Jul 2023</span><br>
-                                <strong>TradeMaster: Online Trading Platform Development</strong><br>
+                                <span>Jun - Jul 2023</span><br>
+                                <strong>Employee Management System (Full Stack Development)</strong><br>
                                 <ul>
-                                    <li>Led the development of an online trading platform, implementing features for real-time trading and portfolio management.</li>
-                                    <li>Utilized React.js and Node.js to create a responsive and user-friendly interface.</li>
-                                    <li>Integrated third-party APIs to provide real-time market data and news updates.</li>
-                                    <li>Ensured the platform's security and compliance with industry standards.</li>
-                                    <li>Conducted user testing and incorporated feedback to improve the overall user experience.</li>
+                                    <li>Designed and built a **full-stack employee management system** using Java, Spring Boot, and Angular.</li>
+                                    <li>Implemented **GraphQL and REST APIs** for optimized data fetching and flexibility.</li>
+                                    <li>Developed a **role-based dashboard** for HR, using Angular and Material UI.</li>
+                                    <li>Secured APIs with **Spring Security and OAuth2**, ensuring **100% compliance** with security protocols.</li>
+                                    <li>Integrated **ElasticSearch** for efficient employee record search functionality.</li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Payment Processing System -->
+                            <li>
+                                <span>Sep - Dec 2023</span><br>
+                                <strong>Payment Processing System (FinTech Application)</strong><br>
+                                <ul>
+                                    <li>Developed a **secure, high-throughput payment gateway** handling 1M+ transactions/month.</li>
+                                    <li>Implemented **multi-threading and parallel processing**, improving transaction speed by 60%.</li>
+                                    <li>Used **MongoDB for NoSQL storage**, optimizing data retrieval for high-volume transactions.</li>
+                                    <li>Integrated **Kafka for event-driven architecture**, ensuring reliable transaction logs.</li>
+                                    <li>Deployed on **AWS Lambda and EC2**, reducing infrastructure costs by 30%.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -97,7 +138,7 @@
                     
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Expected May 2024</span><br>M.S. Information Systems, Stevens Institute of Technology, Hoboken, NJ, GPA: 3.9</li>
+                            <li><span>May 2024</span><br>M.S. Information Systems, Stevens Institute of Technology, Hoboken, NJ, GPA: 3.9</li>
                             <li><span>Jun.2016 - May.2020</span><br>B.Tech in Information Technology, Sree Vidyanikethan Institute of Technology, GPA: 7.5</li>
                         </ul>
                     </div>
@@ -106,31 +147,53 @@
         </div>
     </div>
     <!-- ----------SERVICES---------- -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-brands fa-android"></i>
-                    <h2>Data Analysis</h2>
-                    <p>I use Python, R, and SQL to analyze data and extract meaningful insights.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Data Visualization</h2>
-                    <p>I use tools like Tableau and PowerBI to visualize data and make it understandable for everyone.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Machine Learning</h2>
-                    <p>I develop machine learning models to predict trends and behaviors.</p>
-                    <a href="#">Learn more</a>
-                </div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <!-- Backend Development -->
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h2>Backend Development</h2>
+                <p>Expert in developing scalable and high-performance backend applications using Java, Spring Boot, and Microservices.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- API Development -->
+            <div>
+                <i class="fa-solid fa-link"></i>
+                <h2>API Development & Integration</h2>
+                <p>Building robust RESTful and GraphQL APIs with Spring Boot, ensuring seamless third-party integrations and high availability.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Cloud & DevOps</h2>
+                <p>Deploying and managing cloud-based applications using AWS, Docker, Kubernetes, and CI/CD pipelines.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- Database Optimization -->
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Design & Optimization</h2>
+                <p>Designing and optimizing relational (PostgreSQL, MySQL) and NoSQL (MongoDB) databases for efficient query execution.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- Security & Authentication -->
+            <div>
+                <i class="fa-solid fa-shield-alt"></i>
+                <h2>Security & Authentication</h2>
+                <p>Implementing secure authentication mechanisms like OAuth2, JWT, and role-based access control (RBAC).</p>
+                <a href="#">Learn more</a>
             </div>
         </div>
     </div>
+</div>
+
     <!-- ----------PORTFOLIO--------- -->
     <div id="portfolio">
         <div class="container">
@@ -171,7 +234,7 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> pgatti@stevens.edu</p>
+                    <p><i class="fas fa-paper-plane"></i> pradeepgatti78@gmail.com</p>
                     <p><i class="fas fa-phone-square-alt"></i> +1 (682)-283-9478</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -179,7 +242,7 @@
                         <a href="https://github.com/gpradeep7898"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/gatti-pradeep7898"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
+                    <a href="images/JavaResume.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form>
@@ -219,6 +282,20 @@
             document.querySelector('nav ul').classList.remove('show');
         });
 
+    </script>
+
+     <!-- JavaScript to handle the loading screen -->
+     <script>
+        window.addEventListener("load", function () {
+            const loadingScreen = document.getElementById("loading-screen");
+            const mainContent = document.getElementById("main-content");
+
+            // Add a small delay to give a smooth transition
+            setTimeout(() => {
+                loadingScreen.classList.add("fade-out");
+                mainContent.classList.remove("hidden");
+            }, 1000); // Delay of 1 second
+        });
     </script>
 </body>
 
