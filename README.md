@@ -7,54 +7,126 @@ Welcome to the GitHub repository of Pradeep Gatti's portfolio website. This site
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
+- [Portfolio Sections](#portfolio-sections)
 - [Setup and Usage](#setup-and-usage)
 - [Contribution](#contribution)
 - [Contact](#contact)
 
 ## About
 
-This project is a portfolio website for Pradeep Gatti, a dedicated data analyst. The website includes sections for Home, About, Skills, Experience, Education, Portfolio, and Contact.
+This project is a modern, responsive portfolio website for Pradeep Gatti, a dedicated data analyst with 4.5+ years of experience. The website showcases professional skills, work experience, and projects in an elegant Netflix-inspired dark theme.
 
 ## Features
 
-- **About Me:** Introduction to Pradeep Gatti, including his skills, experiences, and education.
-- **Skills:** Overview of Pradeep's technical skills.
-- **Experience:** Detailed list of Pradeep's professional experiences and projects.
-- **Education:** Overview of Pradeep's educational qualifications.
-- **Portfolio:** Showcase of Pradeep's work, including projects on process innovation management, real-time analytics, and online trading platform development.
-- **Contact:** Form to contact Pradeep directly, download his CV, and access links to his social media profiles.
+- **Modern Design:** Netflix-inspired dark theme with red accents and smooth animations
+- **Responsive Layout:** Fully responsive design that works on all devices
+- **Interactive Elements:** Smooth scrolling, hover effects, and Framer Motion animations
+- **Professional Sections:** Comprehensive coverage of skills, experience, and projects
+- **Contact Integration:** Functional contact form and social media links
+- **3D Elements:** Interactive 3D data visualization using Three.js
 
 ## Tech Stack
 
-This website is built with:
+This website is built with modern technologies:
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion
-- Three.js
+- **Frontend:** React 19 with TypeScript
+- **Build Tool:** Vite for fast development and optimized builds
+- **Styling:** Tailwind CSS with custom Netflix theme
+- **Animations:** Framer Motion for smooth transitions
+- **3D Graphics:** Three.js with React Three Fiber
+- **Deployment:** Render (Static Site)
+
+## Portfolio Sections
+
+### 🏠 Hero Section
+- **Main Headline:** "PRADEEP GATTI" in large, bold typography
+- **Professional Title:** "Data Analyst | Transforming Data into Actionable Insights"
+- **Summary:** Brief professional description highlighting 4.5+ years of experience
+- **Call-to-Action:** "View My Work" and "Download Resume" buttons
+- **Background:** Subtle 3D data visualization with animated elements
+
+### 👨‍💼 About Me Section
+- **Professional Summary:** Comprehensive overview of data analysis expertise
+- **Key Skills:** SQL, Python, Tableau, Excel, ETL pipelines, AWS
+- **Education:** 
+  - Master of Science in Information Systems (Stevens Institute of Technology, USA)
+  - B. Tech in Information Technology (Sree Vidyanikethan Engineering College, India)
+- **Achievements:** Tableau Specialist certification and measurable impact metrics
+
+### 💼 Professional Experience
+- **Timeline Design:** Vertical timeline with red accent line
+- **Current Role:** Data Analyst at Broad Peak Systems (Remote)
+- **Previous Experience:** Data Engineer at Cognizant Technology Solutions
+- **Key Achievements:** 60% data processing time reduction, 20% sales forecasting improvement
+- **Technologies:** Python, SQL, Tableau, AWS, Git, Agile methodologies
+
+### 🛠️ Technical Skills
+- **Programming Languages:** Java, C++, Python, C, TypeScript
+- **Databases:** MySQL, SQL Server, MongoDB, NoSQL
+- **Web Technologies:** HTML5, CSS3, JavaScript, React, Angular
+- **Cloud & Tools:** AWS, Git, GitHub, Jenkins, JIRA, Docker
+- **Methodologies:** Agile/Scrum, Waterfall
+- **Operating Systems:** Windows, Mac, Linux
+
+### 📊 Projects & Certifications
+- **Featured Projects:**
+  - Illegal Drone Tracking (Python, Pandas, GeoPandas)
+  - MindWell Health Application (SQL, Python, Tableau)
+  - Customer Segmentation KMeans (Python, Jupyter, scikit-learn)
+- **Certifications:** Tableau Desktop Specialist, PMP, Java Developer
+
+### 📞 Contact Section
+- **Contact Form:** Functional form with name, email, and message fields
+- **Contact Information:** Phone (+1 682-283-9478) and email (gpradeep7898@gmail.com)
+- **Social Links:** Email, LinkedIn, GitHub, Portfolio links
+- **Professional Summary:** Invitation for collaborations and opportunities
+
+## Portfolio Screenshots
+
+### Hero Section
+![Hero Section](assets/hero-section.png)
+*Clean, modern hero section with animated 3D elements and professional introduction*
+
+### About Me Section
+![About Me](assets/about-section.png)
+*Professional summary and education details in a two-column layout*
+
+### Experience Timeline
+![Experience](assets/experience-section.png)
+*Professional experience displayed in an elegant timeline format*
+
+### Technical Skills
+![Skills](assets/skills-section.png)
+*Comprehensive technical skills organized by category*
+
+### Contact Section
+![Contact](assets/contact-section.png)
+*Contact form and social media links for easy communication*
 
 ## Setup and Usage
 
 To run this project locally:
 
-1. Clone the repository:
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/gpradeep7898/Personal-Portfolio
 ```
 
-2. Install dependencies:
+2. **Install dependencies:**
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. **Start the development server:**
 ```bash
 npm run dev
 ```
 
-4. Open your browser and navigate to the local URL (usually http://localhost:5173)
+4. **Open your browser and navigate to the local URL (usually http://localhost:5173)**
+
+## Live Demo
+
+Visit the live portfolio: [https://personal-portfolio-yojj.onrender.com](https://personal-portfolio-yojj.onrender.com)
 
 ## Contribution
 
@@ -64,28 +136,11 @@ If you want to contribute to this project, feel free to submit a pull request. A
 
 You can reach out to Pradeep via:
 
-- Email at (gpradeep7898@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/gatti-pradeep7898)
-- [GitHub](https://github.com/gpradeep7898)
+- **Email:** gpradeep7898@gmail.com
+- **Phone:** +1 (682) 283-9478
+- **LinkedIn:** [linkedin.com/in/gatti-pradeep7898](https://linkedin.com/in/gatti-pradeep7898)
+- **GitHub:** [github.com/gpradeep7898](https://github.com/gpradeep7898)
 
-## Portfolio Screenshots
-
-Below, you will find a visual representation of key sections from Pradeep Gatti's Data Analyst Portfolio. These images provide an insight into the design, layout, and features of the portfolio, reflecting the skills and experiences documented within the site.
-
-### Home Section
-
-<img width="1440" alt="Screen Shot 2023-08-11 at 9 09 02 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/c0f1f1b7-1363-47b6-82f2-8da6112ab13a">
-
-### Services Overview
-
-<img width="1440" alt="Screen Shot 2023-08-11 at 7 01 11 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/4ed2dc97-9c18-4b77-a5c5-02e47f04014e">
-
-### Work Detail
-
-<img width="1435" alt="Screen Shot 2023-08-11 at 7 02 25 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/8d214ae5-04d7-4efe-9845-a580ba599271">
-
-### Contact
-
-<img width="1440" alt="Screen Shot 2023-08-11 at 7 02 46 PM" src="https://github.com/gpradeep7898/Personal-Portfolio/assets/56557652/6cdb3e41-2397-4d1a-88df-8927fb5b2364">
+---
 
 Feel free to explore the website to gain a comprehensive understanding of Pradeep's work, capabilities, and achievements in the field of data analytics.
