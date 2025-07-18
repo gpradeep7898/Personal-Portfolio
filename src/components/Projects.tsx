@@ -49,8 +49,6 @@ const Projects: React.FC = () => {
     }
   ];
 
-  const allItems = [...projects, ...certifications];
-
   return (
     <section className="section-padding bg-netflix-black">
       <div className="container-custom">
