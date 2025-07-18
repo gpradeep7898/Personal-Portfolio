@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Pradeep Gatti - Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <!-- Custom Loader Animation -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Good things take time...📈</div>
+    </div>
+
+    <div id="theme-switcher">
+        <button id="theme-toggle-btn">Switch Theme</button>
+    </div>
+
+    <!-- Main content starts hidden -->
+    <div id="main-content" class="hidden">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo"></img>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p><h2>Java Full Stack Developer</h2></p>
+                <h1>Hi, I'm <span>Pradeep Gatti</span><br>Turning data into actionable insights!</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/hoodie.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a passionate Java Backend Developer with 3.5+ years of experience in designing and building high-performance, scalable applications. My expertise lies in Java, Spring Boot, and Microservices architecture, ensuring robust API development and seamless integrations. 
+
+                        I specialize in optimizing backend performance, implementing secure authentication (OAuth2, JWT), and designing relational and NoSQL databases for efficiency. I have hands-on experience in DevOps practices, CI/CD pipelines using Jenkins and Docker, and deploying scalable applications on AWS. 
+                        
+                        With a deep understanding of software design patterns, best practices, and Agile methodologies, I thrive in cross-functional teams to deliver high-quality software solutions.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python:</span><br>Expert in data analysis, machine learning algorithms, and web development.</li>
+                            <li><span>R:</span><br>Proficient in statistical modeling and data visualization.</li>
+                            <li><span>SQL:</span><br>Advanced skills in database querying, management, and optimization.</li>
+                            <li><span>Java & JavaScript:</span><br>Proficient in web application development and testing.</li>
+                            <li><span>AWS & MS Azure:</span><br>Knowledgeable in cloud computing and services.</li>
+                            <li><span>Tableau & PowerBI:</span><br>Advanced skills in data visualization and business intelligence tools.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <!-- Java Full Stack Engineer -->
+                            <li>
+                                <span>Jul 2020 - Aug 2022</span><br>
+                                <strong>Java Full Stack Engineer, Cognizant Technology Solutions Pvt. Ltd., Hyderabad, India</strong><br>
+                                <ul>
+                                    <li>Developed and optimized **scalable microservices** using Java, Spring Boot, and Hibernate.</li>
+                                    <li>Designed and integrated **RESTful APIs** for seamless communication across distributed services.</li>
+                                    <li>Enhanced **database performance** by implementing indexing and query optimization in PostgreSQL.</li>
+                                    <li>Implemented **Spring Security (OAuth2, JWT)** to ensure secure authentication and authorization.</li>
+                                    <li>Automated **CI/CD pipelines** using Jenkins and Docker for streamlined deployments.</li>
+                                    <li>Developed **unit and integration tests** using JUnit and Mockito, improving code quality by 30%.</li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Inventory Management System -->
+                            <li>
+                                <span>Jan - Apr 2023</span><br>
+                                <strong>Inventory Management System (Microservices Architecture)</strong><br>
+                                <ul>
+                                    <li>Architected a **high-performance inventory system** using Java, Spring Boot, and Kafka.</li>
+                                    <li>Implemented **asynchronous messaging** with RabbitMQ to handle inventory updates in real-time.</li>
+                                    <li>Developed **role-based authentication (RBAC)** and fine-grained access controls.</li>
+                                    <li>Optimized **API response time by 40%** through Redis caching and lazy loading techniques.</li>
+                                    <li>Deployed microservices using **Docker and Kubernetes**, ensuring high availability.</li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Employee Management System -->
+                            <li>
+                                <span>Jun - Jul 2023</span><br>
+                                <strong>Employee Management System (Full Stack Development)</strong><br>
+                                <ul>
+                                    <li>Designed and built a **full-stack employee management system** using Java, Spring Boot, and Angular.</li>
+                                    <li>Implemented **GraphQL and REST APIs** for optimized data fetching and flexibility.</li>
+                                    <li>Developed a **role-based dashboard** for HR, using Angular and Material UI.</li>
+                                    <li>Secured APIs with **Spring Security and OAuth2**, ensuring **100% compliance** with security protocols.</li>
+                                    <li>Integrated **ElasticSearch** for efficient employee record search functionality.</li>
+                                </ul>
+                            </li>
+                    
+                            <!-- Payment Processing System -->
+                            <li>
+                                <span>Sep - Dec 2023</span><br>
+                                <strong>Payment Processing System (FinTech Application)</strong><br>
+                                <ul>
+                                    <li>Developed a **secure, high-throughput payment gateway** handling 1M+ transactions/month.</li>
+                                    <li>Implemented **multi-threading and parallel processing**, improving transaction speed by 60%.</li>
+                                    <li>Used **MongoDB for NoSQL storage**, optimizing data retrieval for high-volume transactions.</li>
+                                    <li>Integrated **Kafka for event-driven architecture**, ensuring reliable transaction logs.</li>
+                                    <li>Deployed on **AWS Lambda and EC2**, reducing infrastructure costs by 30%.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>May 2024</span><br>M.S. Information Systems, Stevens Institute of Technology, Hoboken, NJ, GPA: 3.9</li>
+                            <li><span>Jun.2016 - May.2020</span><br>B.Tech in Information Technology, Sree Vidyanikethan Institute of Technology, GPA: 7.5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------SERVICES---------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <!-- Backend Development -->
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h2>Backend Development</h2>
+                <p>Expert in developing scalable and high-performance backend applications using Java, Spring Boot, and Microservices.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- API Development -->
+            <div>
+                <i class="fa-solid fa-link"></i>
+                <h2>API Development & Integration</h2>
+                <p>Building robust RESTful and GraphQL APIs with Spring Boot, ensuring seamless third-party integrations and high availability.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Cloud & DevOps</h2>
+                <p>Deploying and managing cloud-based applications using AWS, Docker, Kubernetes, and CI/CD pipelines.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- Database Optimization -->
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Design & Optimization</h2>
+                <p>Designing and optimizing relational (PostgreSQL, MySQL) and NoSQL (MongoDB) databases for efficient query execution.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <!-- Security & Authentication -->
+            <div>
+                <i class="fa-solid fa-shield-alt"></i>
+                <h2>Security & Authentication</h2>
+                <p>Implementing secure authentication mechanisms like OAuth2, JWT, and role-based access control (RBAC).</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ----------PORTFOLIO--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/BPR.jpg" alt="">
+                    <div class="layer">
+                        <h2>Volkswagen BPR: Process Innovation Management</h2>
+                        <p>Optimized Volkswagen's automobile process, eliminating 20% of inefficiencies and saving the company $500k annually.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Netflix_stats.png" alt="">
+                    <div class="layer">
+                        <h2>Netflix Data Dynamics: Real-Time Analytics</h2>
+                        <p>Developed a machine learning algorithm for real-time data analytics, achieving 95% accuracy.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/trade.jpg" alt="">
+                    <div class="layer">
+                        <h2>TradeMaster: Online Trading Platform Development</h2>
+                        <p>Developed a comprehensive online trading platform enabling users to execute virtual trades.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> pradeepgatti78@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +1 (682)-283-9478</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/gpradeep7898"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gatti-pradeep7898"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/JavaResume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+
+    </script>
+
+     <!-- JavaScript to handle the loading screen -->
+     <script>
+        window.addEventListener("load", function () {
+            const loadingScreen = document.getElementById("loading-screen");
+            const mainContent = document.getElementById("main-content");
+
+            // Add a small delay to give a smooth transition
+            setTimeout(() => {
+                loadingScreen.classList.add("fade-out");
+                mainContent.classList.remove("hidden");
+            }, 1000); // Delay of 1 second
+        });
+    </script>
+</body>
+
+</html>
