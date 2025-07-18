@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E50914;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B2070F;
+  }
+}
+
+@layer components {
+  .netflix-gradient {
+    background: linear-gradient(135deg, #000000 0%, #141414 100%);
+  }
+
+  .netflix-red-gradient {
+    background: linear-gradient(135deg, #E50914 0%, #B2070F 100%);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .netflix-button {
+    @apply bg-netflix-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-netflix-red focus:ring-opacity-50;
+  }
+
+  .netflix-button-outline {
+    @apply border-2 border-netflix-red text-netflix-red hover:bg-netflix-red hover:text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-netflix-red focus:ring-opacity-50;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .bg-netflix-red { background-color: #E50914 !important; }
+  .bg-netflix-black { background-color: #141414 !important; }
+  .bg-netflix-dark-gray { background-color: #181818 !important; }
+  .text-netflix-red { color: #E50914 !important; }
+  .text-netflix-black { color: #141414 !important; }
+  .text-netflix-gray { color: #B3B3B3 !important; }
+  .text-netflix-light-gray { color: #E5E5E5 !important; }
+  .text-netflix-white { color: #FFFFFF !important; }
+  .border-netflix-red { border-color: #E50914 !important; }
+} 
