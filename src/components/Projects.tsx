@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SectionDivider from './SectionDivider';
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -59,8 +60,8 @@ const Projects: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Projects & <span className="text-netflix-red">Certifications</span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            Projects & <span className="gradient-text">Certifications</span>
           </h2>
           <div className="w-24 h-1 bg-netflix-red mx-auto"></div>
         </motion.div>
@@ -235,6 +236,7 @@ const Projects: React.FC = () => {
           )}
         </AnimatePresence>
       </div>
+      <SectionDivider />
     </section>
   );
 };

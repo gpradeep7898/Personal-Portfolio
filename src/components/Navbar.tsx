@@ -21,9 +21,37 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+      
+      const offset = 100; // Account for fixed navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      // Fast smooth scroll with custom animation
+      const startPosition = window.pageYOffset;
+      const distance = offsetPosition - startPosition;
+      const duration = Math.min(600, Math.abs(distance) * 0.5); // Faster: max 600ms
+      let start: number | null = null;
+
+      const easeInOutCubic = (t: number): number => {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      };
+
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutCubic(progress);
+
+        window.scrollTo(0, startPosition + distance * ease);
+
+        if (progress < 1) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      requestAnimationFrame(animation);
     }
-    setIsMenuOpen(false);
   };
 
   return (

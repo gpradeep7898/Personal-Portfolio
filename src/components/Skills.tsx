@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SectionDivider from './SectionDivider';
 
 const Skills: React.FC = () => {
   const skillCategories = [
@@ -8,24 +9,40 @@ const Skills: React.FC = () => {
       skills: ["Java", "C++", "Python", "C", "TypeScript"]
     },
     {
+      category: "Web Technologies",
+      skills: ["HTML/HTML5", "CSS3", "CSS", "XML", "JavaScript", "AJAX", "jQuery", "JSON", "Bootstrap"]
+    },
+    {
+      category: "Front-End Technologies",
+      skills: ["Angular.js", "Node.js", "React.js"]
+    },
+    {
+      category: "Back-End Technologies",
+      skills: ["Node.js", "Python", "Java", ".NET", "Express.js"]
+    },
+    {
+      category: "Frameworks",
+      skills: ["Spring Boot", "Angular", "Docker", "Hibernate", "Kubernetes"]
+    },
+    {
       category: "Databases",
       skills: ["MySQL", "SQL Server", "JDBC", "NoSQL", "MongoDB"]
     },
     {
-      category: "Web Technologies",
-      skills: ["HTML/HTML5", "CSS3", "JavaScript", "AJAX", "jQuery", "JSON", "Bootstrap"]
+      category: "Data Visualization",
+      skills: ["Tableau", "Power BI", "Plotly", "Matplotlib", "Seaborn", "Looker Studio"]
     },
     {
-      category: "Frameworks & Back-End",
-      skills: ["Spring Boot", "Angular", "Docker", "Hibernate", "Kubernetes", "Node.js", "Express.js"]
-    },
-    {
-      category: "Cloud Platforms & Tools",
-      skills: ["AWS", "Git", "GitHub", "GitLab", "Jenkins", "JIRA", "Confluence"]
+      category: "Machine Learning & Analytics",
+      skills: ["Scikit-learn", "NumPy", "Pandas", "Seaborn"]
     },
     {
       category: "Development Tools",
-      skills: ["Visual Studio Code", "IntelliJ", "Eclipse", "Spring Tool Suite", "Postman", "SOAP UI"]
+      skills: ["Visual Studio Code", "IntelliJ", "Eclipse", "Spring Tool Suite", "Postman", "SOAP UI", "Jenkins", "JIRA", "Confluence"]
+    },
+    {
+      category: "Cloud Platforms & Version Control",
+      skills: ["AWS", "Git", "GitHub", "GitLab"]
     }
   ];
 
@@ -39,8 +56,8 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Technical <span className="text-netflix-red">Skills</span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            Technical <span className="gradient-text">Skills</span>
           </h2>
           <div className="w-24 h-1 bg-netflix-red mx-auto"></div>
         </motion.div>
@@ -55,7 +72,7 @@ const Skills: React.FC = () => {
               viewport={{ once: true }}
               className="glass-effect p-6 rounded-lg"
             >
-              <h3 className="text-xl font-bold text-netflix-red mb-4">
+              <h3 className="text-2xl font-bold text-netflix-red mb-4">
                 {category.category}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -117,7 +134,7 @@ const Skills: React.FC = () => {
             Operating Systems
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {["Windows", "Mac", "Linux"].map((os, index) => (
+            {["Windows", "macOS", "Linux"].map((os, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -133,6 +150,7 @@ const Skills: React.FC = () => {
           </div>
         </motion.div>
       </div>
+      <SectionDivider />
     </section>
   );
 };

@@ -14,7 +14,7 @@ Welcome to the GitHub repository of Pradeep Gatti's portfolio website. This site
 
 ## About
 
-This project is a modern, responsive portfolio website for Pradeep Gatti, a dedicated data analyst with 4.5+ years of experience. The website showcases professional skills, work experience, and projects in an elegant Netflix-inspired dark theme.
+This project is a modern, responsive portfolio website for Pradeep Gatti, a dedicated data analyst with 5 years of experience. The website showcases professional skills, work experience, and projects in an elegant Netflix-inspired dark theme.
 
 ## Features
 
@@ -41,7 +41,7 @@ This website is built with modern technologies:
 ### 🏠 Hero Section
 - **Main Headline:** "PRADEEP GATTI" in large, bold typography
 - **Professional Title:** "Data Analyst | Transforming Data into Actionable Insights"
-- **Summary:** Brief professional description highlighting 4.5+ years of experience
+- **Summary:** Brief professional description highlighting 5 years of experience
 - **Call-to-Action:** "View My Work" and "Download Resume" buttons
 - **Background:** Subtle 3D data visualization with animated elements
 
@@ -55,9 +55,9 @@ This website is built with modern technologies:
 
 ### 💼 Professional Experience
 - **Timeline Design:** Vertical timeline with red accent line
-- **Current Role:** Data Analyst at Broad Peak Systems (Remote)
-- **Previous Experience:** Data Engineer at Cognizant Technology Solutions
-- **Key Achievements:** 60% data processing time reduction, 20% sales forecasting improvement
+- **Current Role:** Data Analyst at TickTock Inc. (NJ)
+- **Previous Experience:** Data Analyst at Broad Peak Systems, Data Engineer at Cognizant Technology Solutions
+- **Key Achievements:** 28% marketing ROI improvement, 65% reduction in manual reporting, 22% inventory alignment improvement
 - **Technologies:** Python, SQL, Tableau, AWS, Git, Agile methodologies
 
 ### 🛠️ Technical Skills
@@ -66,7 +66,7 @@ This website is built with modern technologies:
 - **Web Technologies:** HTML5, CSS3, JavaScript, React, Angular
 - **Cloud & Tools:** AWS, Git, GitHub, Jenkins, JIRA, Docker
 - **Methodologies:** Agile/Scrum, Waterfall
-- **Operating Systems:** Windows, Mac, Linux
+- **Operating Systems:** Windows, macOS, Linux
 
 ### 📊 Projects & Certifications
 - **Featured Projects:**

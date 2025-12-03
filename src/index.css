@@ -12,15 +12,28 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto; /* Changed to auto for faster custom scroll */
+    scroll-padding-top: 100px; /* Account for fixed navbar */
   }
 
   body {
     font-family: 'Inter', 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif;
     background-color: #000000;
     color: #FFFFFF;
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+    font-size: 18px;
+  }
+
+  /* Increase base font sizes */
+  p, li, span, div {
+    font-size: 1.125rem; /* 18px base */
+  }
+
+  /* Hide default cursor globally when custom cursor is active */
+  .cursor-none,
+  .cursor-none * {
+    cursor: none !important;
   }
 
   /* Custom scrollbar */
@@ -59,10 +72,82 @@
 
   .netflix-button {
     @apply bg-netflix-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-netflix-red focus:ring-opacity-50;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3), 0 0 40px rgba(229, 9, 20, 0.1);
+  }
+
+  .netflix-button:hover {
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.6), 0 0 60px rgba(229, 9, 20, 0.3);
   }
 
   .netflix-button-outline {
     @apply border-2 border-netflix-red text-netflix-red hover:bg-netflix-red hover:text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-netflix-red focus:ring-opacity-50;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
+  }
+
+  .netflix-button-outline:hover {
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.5), 0 0 50px rgba(229, 9, 20, 0.2);
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(135deg, #E50914 0%, #FF6B6B 50%, #E50914 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E50914, #FF6B6B, #E50914);
+    background-size: 200% auto;
+    z-index: 9998;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+    animation: gradient-shift 2s ease infinite;
+  }
+
+  /* Section divider */
+  .section-divider {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #E50914, transparent);
+    margin: 60px 0;
+    overflow: hidden;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.8), transparent);
+    animation: divider-sweep 3s ease-in-out infinite;
+  }
+
+  @keyframes divider-sweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Floating particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.3;
   }
 
   .section-padding {

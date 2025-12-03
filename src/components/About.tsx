@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import NumberCounter from './NumberCounter';
+import SectionDivider from './SectionDivider';
 
 const About: React.FC = () => {
-  const summary = "Analytical and results-driven Data Analyst with 4.5+ years of experience transforming raw data into actionable business insights. Skilled in SQL, Python, Tableau, and Excel to conduct data wrangling, statistical analysis, and dynamic visualization. Adept at designing ETL pipelines, developing interactive dashboards, and translating complex datasets into clear narratives for decision-makers. Proficient in working with relational and NoSQL databases (MySQL, SQL Server, MongoDB) and deploying analytics solutions on cloud platforms like AWS. Proven success collaborating with cross-functional teams in Agile environments to support data-driven strategies that improve operational efficiency and business outcomes. Tableau Specialist certified, with a strong foundation in programming and a passion for converting data into strategic value.";
+  const summary = "Analytical and results-driven Data Analyst with 5 years of experience transforming raw data into actionable business insights. Currently driving data analytics initiatives at TickTock Inc., where I design performance dashboards and leverage machine learning models to optimize digital marketing campaigns, achieving 28% improvement in marketing ROI. Skilled in SQL, Python, Tableau, and Excel to conduct data wrangling, statistical analysis, and dynamic visualization. Adept at designing ETL pipelines, developing interactive dashboards, and translating complex datasets into clear narratives for decision-makers. Proficient in working with relational and NoSQL databases (MySQL, SQL Server, MongoDB) and deploying analytics solutions on cloud platforms like AWS. Proven success collaborating with cross-functional teams in Agile environments to support data-driven strategies that improve operational efficiency and business outcomes. Tableau Specialist certified, with a strong foundation in programming and a passion for converting data into strategic value.";
 
   const education = [
     {
@@ -27,8 +29,8 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-netflix-red">About</span> Me
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            <span className="gradient-text">About</span> Me
           </h2>
           <div className="w-24 h-1 bg-netflix-red mx-auto"></div>
         </motion.div>
@@ -44,7 +46,7 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-semibold mb-6 text-netflix-white">
               Professional Summary
             </h3>
-            <p className="text-netflix-gray leading-relaxed text-lg">
+            <p className="text-netflix-gray leading-relaxed text-xl">
               {summary}
             </p>
           </motion.div>
@@ -92,19 +94,26 @@ const About: React.FC = () => {
           className="mt-16 grid md:grid-cols-3 gap-8"
         >
           <div className="text-center glass-effect p-6 rounded-lg">
-            <div className="text-4xl font-bold text-netflix-red mb-2">4.5+</div>
+            <div className="text-4xl font-bold gradient-text mb-2">
+              <NumberCounter end={5} suffix="+" />
+            </div>
             <p className="text-netflix-gray">Years of Experience</p>
           </div>
           <div className="text-center glass-effect p-6 rounded-lg">
-            <div className="text-4xl font-bold text-netflix-red mb-2">60%</div>
-            <p className="text-netflix-gray">Data Processing Time Reduction</p>
+            <div className="text-4xl font-bold gradient-text mb-2">
+              <NumberCounter end={28} suffix="%" />
+            </div>
+            <p className="text-netflix-gray">Marketing ROI Improvement</p>
           </div>
           <div className="text-center glass-effect p-6 rounded-lg">
-            <div className="text-4xl font-bold text-netflix-red mb-2">20%</div>
-            <p className="text-netflix-gray">Sales Forecasting Improvement</p>
+            <div className="text-4xl font-bold gradient-text mb-2">
+              <NumberCounter end={65} suffix="%" />
+            </div>
+            <p className="text-netflix-gray">Reduction in Manual Reporting</p>
           </div>
         </motion.div>
       </div>
+      <SectionDivider />
     </section>
   );
 };

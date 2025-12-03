@@ -1,21 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Sphere } from '@react-three/drei';
+import { Sphere } from '@react-three/drei';
 import * as THREE from 'three';
+import TypingAnimation from './TypingAnimation';
 
-// 3D Data Visualization Component
-const DataVisualization: React.FC = () => {
+// 3D Data Visualization Component with mouse interaction
+const DataVisualization: React.FC<{ mousePosition: { x: number; y: number } }> = ({ mousePosition }) => {
   const meshRef = useRef<THREE.Mesh>(null);
   const groupRef = useRef<THREE.Group>(null);
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
-      meshRef.current.rotation.y += 0.01;
+      // Base rotation
+      meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.1 + mousePosition.y * 0.3;
+      meshRef.current.rotation.y += 0.01 + mousePosition.x * 0.2;
     }
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.005;
+      // Parallax effect based on mouse position
+      groupRef.current.rotation.y += 0.005 + mousePosition.x * 0.1;
+      groupRef.current.rotation.x = mousePosition.y * 0.1;
     }
   });
 
@@ -77,6 +81,10 @@ const DataVisualization: React.FC = () => {
 };
 
 const Hero: React.FC = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const heroRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
@@ -84,57 +92,108 @@ const Hero: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        
+        // Normalize to -1 to 1 range
+        const normalizedX = (x - 0.5) * 2;
+        const normalizedY = (y - 0.5) * 2;
+        
+        setMousePosition({ x: normalizedX, y: normalizedY });
+      }
+    };
+
+    const heroElement = heroRef.current;
+    if (heroElement) {
+      heroElement.addEventListener('mousemove', handleMouseMove);
+      return () => {
+        heroElement.removeEventListener('mousemove', handleMouseMove);
+      };
+    }
+  }, []);
+
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 netflix-gradient" />
+    <section 
+      ref={heroRef}
+      className="min-h-screen relative flex items-center justify-center overflow-hidden"
+    >
+      {/* Background gradient with parallax */}
+      <motion.div 
+        className="absolute inset-0 netflix-gradient"
+        animate={{
+          backgroundPosition: `${50 + mousePosition.x * 5}% ${50 + mousePosition.y * 5}%`,
+        }}
+        transition={{ type: "spring", stiffness: 50, damping: 20 }}
+      />
       
-      {/* 3D Canvas */}
-      <div className="absolute inset-0 opacity-30">
+      {/* 3D Canvas with parallax */}
+      <motion.div 
+        className="absolute inset-0 opacity-30"
+        animate={{
+          x: mousePosition.x * 20,
+          y: mousePosition.y * 20,
+        }}
+        transition={{ type: "spring", stiffness: 50, damping: 20 }}
+      >
         <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} intensity={1} />
-          <DataVisualization />
-          <OrbitControls enableZoom={false} enablePan={false} />
+          <DataVisualization mousePosition={mousePosition} />
         </Canvas>
-      </div>
+      </motion.div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center container-custom px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
+      {/* Content with subtle parallax */}
+      <motion.div 
+        ref={contentRef}
+        className="relative z-10 text-center container-custom px-4"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ 
+          opacity: 1, 
+          x: mousePosition.x * 10,
+          y: 50 + mousePosition.y * 10,
+        }}
+        transition={{ 
+          opacity: { duration: 0.8, delay: 0.2 },
+          x: { type: "spring", stiffness: 100, damping: 30 },
+          y: { type: "spring", stiffness: 100, damping: 30 },
+        }}
+      >
+        <div className="max-w-4xl mx-auto">
           {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="text-7xl md:text-9xl lg:text-[12rem] font-bold mb-6"
           >
-            <span className="text-netflix-white">PRADEEP GATTI</span>
+            <span className="gradient-text">PRADEEP GATTI</span>
           </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Subtitle with Typing Animation */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-netflix-gray mb-8"
+            className="text-2xl md:text-3xl text-netflix-gray mb-8 min-h-[3rem]"
           >
-            Data Analyst | Transforming Data into Actionable Insights
-          </motion.p>
+            <TypingAnimation 
+              text="Data Analyst | Transforming Data into Actionable Insights" 
+              speed={30}
+            />
+          </motion.div>
 
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-netflix-light-gray mb-12 max-w-2xl mx-auto"
+            className="text-xl text-netflix-light-gray mb-12 max-w-2xl mx-auto"
           >
-            Analytical and results-driven professional with 4.5+ years of experience 
+            Analytical and results-driven professional with 5 years of experience 
             in data wrangling, statistical analysis, and dynamic visualization.
           </motion.p>
 
@@ -152,35 +211,35 @@ const Hero: React.FC = () => {
               View My Work
             </motion.button>
             <a
-              href="/ResumeDataAnalyst.pdf"
+              href="/PRADEEP_GATTI_ResumeDataAnalyst.pdf"
               download
               className="netflix-button-outline text-lg px-10 py-4 flex items-center"
             >
               Download Resume
             </a>
           </div>
-        </motion.div>
+        </div>
+      </motion.div>
 
-        {/* Scroll indicator */}
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+      >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-netflix-red rounded-full flex justify-center"
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
+            animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-netflix-red rounded-full flex justify-center"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-netflix-red rounded-full mt-2"
-            />
-          </motion.div>
+            className="w-1 h-3 bg-netflix-red rounded-full mt-2"
+          />
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
